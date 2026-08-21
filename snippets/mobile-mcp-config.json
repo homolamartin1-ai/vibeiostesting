@@ -1,0 +1,9 @@
+{
+  "_comment": "Mobile MCP entry for Antigravity's MCP config. Add the 'mobile' server alongside any existing servers — do not replace the whole mcpServers block. Restart Antigravity fully after saving. See docs/setup-07-mobile-mcp.md.",
+  "mcpServers": {
+    "mobile": {
+      "command": "npx",
+      "args": ["-y", "@mobilenext/mobile-mcp@latest"]
+    }
+  }
+}
