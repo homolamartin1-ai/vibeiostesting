@@ -20,13 +20,19 @@ brew --version
   When it finishes, follow any **"Next steps"** it prints to add `brew` to your PATH, then
   re-run `brew --version` to confirm.
 
-### Step 2 — Install Node
+### Step 2 — Do you already have Node? Check first
 ```bash
-brew install node
-node -v && npm -v      # verify
+node -v
 ```
-Node LTS (18+) is fine. *(Already have Node? If `node -v` prints a version, you can skip
-this step.)*
+- **Prints a version** (e.g. `v20.x`) → you already have Node. **Skip the install** —
+  you're done with Node.
+- **`command not found: node`** → install it with Homebrew:
+  ```bash
+  brew install node
+  node -v && npm -v      # verify
+  ```
+
+Node LTS (18+) is fine.
 
 ## Antigravity IDE
 Antigravity IDE is the agentic IDE where the AI agent lives and where the mobile MCP
