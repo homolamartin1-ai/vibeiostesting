@@ -69,6 +69,7 @@ open -a Simulator               # open the Simulator window
 | Symptom | Fix |
 |---|---|
 | `xcodebuild` requires Xcode | You have only the CLI tools. Install full Xcode from the App Store (Step 2). |
+| Installed Xcode but still get `…requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance` | Xcode is installed but your Mac still points at the CLI tools. Point it at Xcode: `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer` then `sudo xcodebuild -license accept` and re-run `xcodebuild -version`. |
 | Xcode version is older than 15 | Update Xcode from the App Store. |
 | "iPhone 15" not found | Run `xcrun simctl list devices` and use a name from your list. |
 | License errors | Re-run `sudo xcodebuild -license accept`. |
