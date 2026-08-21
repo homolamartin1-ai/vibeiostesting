@@ -41,14 +41,16 @@ java -version
 maestro -v                          # now prints the version
 ```
 
-## Verify it sees the Simulator
-Boot a Simulator with a TechShop build installed (see [run notes](../snippets/run-techshop.sh)),
-then:
-```bash
-xcrun simctl list devices booted    # confirm a Simulator is booted
-maestro studio                      # opens the interactive inspector
-```
-Maestro Studio should show the app's elements. We use Studio for debugging in Section 13.
+## You're done — plus a note on Maestro Studio
+`maestro -v` printing a version means Maestro is installed and ready. There's nothing else
+to verify now — you'll confirm it drives the Simulator when you run your first flow in
+Section 8.
+
+**Maestro Studio** — the interactive inspector for viewing element IDs and recording flow
+steps — is **no longer bundled with the CLI**. It's now a **separate, optional desktop app**.
+You do **not** need it to install or run Maestro. Download it only if you want the visual
+inspector (handy for debugging in Section 13):
+[https://studio.maestro.dev/MaestroStudio.dmg](https://studio.maestro.dev/MaestroStudio.dmg)
 
 ## Troubleshooting
 | Symptom | Fix |
@@ -56,7 +58,7 @@ Maestro Studio should show the app's elements. We use Studio for debugging in Se
 | `Unable to locate a Java Runtime` | Maestro needs Java. Install a JDK: `brew install --cask temurin`, then re-run. |
 | `maestro: command not found` (after install) | Open a new terminal, or run `export PATH="$PATH":"$HOME/.maestro/bin"`. Ensure `~/.maestro/bin` is on your PATH. |
 | `curl: command not found` | Very rare on macOS. Install with `brew install curl`, or reinstall the Command Line Tools (`xcode-select --install`). |
-| Studio shows no device | Boot a Simulator first (`xcrun simctl boot "iPhone 16"`). |
-| Flow can't find an element | The `appId:` must be `com.techshop.ios`; check the element's id in Studio. |
+| `maestro studio` says "no longer bundled with the CLI" | Correct — Studio is now a separate desktop app (see the link above). It's optional; the CLI runs flows without it. |
+| Flow can't find an element | The `appId:` must be `com.techshop.ios`; inspect the element's id with the Studio desktop app or the mobile MCP. |
 
 CLI reference: [`snippets/maestro-commands.sh`](../snippets/maestro-commands.sh).
