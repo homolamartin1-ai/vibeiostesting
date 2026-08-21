@@ -5,8 +5,8 @@
 push from — you need that for CI in Section 14. Then clone your fork:
 
 ```bash
-git clone git@github.com:<your-username>/iosvibetesting.git
-cd iosvibetesting
+git clone git@github.com:<your-username>/vibeiostesting.git
+cd vibeiostesting
 ```
 
 ## What's inside

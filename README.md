@@ -11,8 +11,8 @@ Resources for the Udemy course. Everything you need to follow along is in this r
 to and push from, then clone your fork:
 
 ```
-git clone git@github.com:<your-username>/iosvibetesting.git
-cd iosvibetesting
+git clone git@github.com:<your-username>/vibeiostesting.git
+cd vibeiostesting
 ```
 
 Full setup — Xcode, Node, Antigravity, Maestro, Appium, and the mobile MCP — is Section 3.
@@ -22,7 +22,7 @@ Full setup — Xcode, Node, Antigravity, Maestro, Appium, and the mobile MCP —
 ## What's in here
 
 ```
-iosvibetesting/
+vibeiostesting/
 ├── techshop/                     ← The app under test — two implementations
 │   ├── swiftui-broken/           ← Native SwiftUI — 15 bugs planted (+2 mobile-specific)
 │   ├── swiftui-fixed/            ← Native SwiftUI — clean, used in verification
