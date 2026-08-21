@@ -48,16 +48,19 @@ mdfind "kMDItemCFBundleIdentifier == 'com.apple.dt.Xcode'"
    ```bash
    xcodebuild -version
    ```
-   - **Prints `Xcode 15.x` or newer** → you're set. Go to **Step 5**.
-   - **Prints something older than 15** → update Xcode from the App Store first (see below).
+   - **Prints a version** (e.g. `Xcode 26.x`, or `Xcode 16.x` / `17.x`) → you're set. Go to **Step 5**.
+   - **Prints something older than Xcode 15** → update Xcode from the App Store first (see below).
    - **Errors** with `…requires Xcode, but active developer directory
      '/Library/Developer/CommandLineTools' is a command line tools instance` → Xcode is
      installed but your Mac is still pointed at the Command Line Tools. **Repair it in
      Step 4.**
 
 ### Which version you need
-- **Xcode 15 or newer** is required (the course targets **iOS 17+**).
-- **Xcode 16 or the latest** is recommended.
+- The course only needs **iOS 17+**, supported by **Xcode 15 and newer** — so any current
+  Xcode is fine.
+- Recent Xcode uses **year-based version numbers** (e.g. **Xcode 26**). A bigger number just
+  means newer — Xcode 16, 17, and 26 all work. Update from the App Store only if yours
+  somehow predates Xcode 15.
 
 ---
 
@@ -115,7 +118,7 @@ Recent Xcode does **not** include the iOS Simulator by default — you download 
 | Symptom | Fix |
 |---|---|
 | `xcodebuild -version` errors with `…active developer directory '/Library/Developer/CommandLineTools'…` | Xcode is installed but your Mac points at the CLI tools. Do **Step 4**. |
-| Xcode version is older than 15 | Update Xcode from the App Store. |
+| Xcode version is older than 15 | Update Xcode from the App Store (any current Xcode — 16, 17, or year-based like 26 — works). |
 | `mdfind` prints nothing but you think Xcode is installed | It may still be downloading, or Spotlight is indexing. Wait, then re-run. Or check the App Store for the install progress. |
 | `== Devices ==` is empty / `== Runtimes ==` is empty | No Simulator runtime installed. Run `xcodebuild -downloadPlatform iOS` (Step 5). |
 | `Invalid device or device pair: iPhone 15` | That model doesn't exist in your Xcode. Run `xcrun simctl list devices available` and boot a name from the list (e.g. `iPhone 16`). |
