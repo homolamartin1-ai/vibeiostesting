@@ -50,15 +50,27 @@ Confirm both install as bundle id com.techshop.ios and show the login screen.
 *Used in: Section 3, Clip 7*
 
 ```
-Set up the mobile MCP server in Antigravity so you can drive the iOS Simulator:
-1. Find (or create) Antigravity's MCP config file and show me the path.
-2. Add the mobile MCP server entry WITHOUT touching my other servers.
-3. Tell me if I need to reload/restart Antigravity, then verify by taking a screenshot
+Set up the mobile MCP server in Antigravity IDE so you can drive the iOS Simulator.
+1. Find (or create) Antigravity IDE's MCP config file and show me the path.
+2. Add this EXACT server entry, alongside my other servers (do not touch the others).
+   Use the SCOPED package @mobilenext/mobile-mcp — NOT the unscoped "mobile-mcp",
+   which is a broken, Android-only stub:
+
+     "mobile": {
+       "command": "npx",
+       "args": ["-y", "@mobilenext/mobile-mcp@latest"]
+     }
+
+3. Tell me if I need to reload/restart Antigravity IDE, then verify by taking a screenshot
    of the booted Simulator and describing what you see.
 ```
 
-**The one manual beat:** Antigravity usually needs a reload to load a new MCP server. The
-agent will tell you when.
+> **Use the scoped package.** `@mobilenext/mobile-mcp` is the real mobile-next server (iOS +
+> Android, via WebDriverAgent — no extra tools needed). The unscoped `mobile-mcp` on npm is a
+> broken stub and will fail with missing-dependency or `ADB not found` errors.
+
+**The one manual beat:** Antigravity IDE usually needs a reload to load a new MCP server.
+The agent will tell you when. The **first** run is slow — it builds WebDriverAgent once.
 
 ## Prompt 4: First vibe check
 *Used in: Section 3, Clip 8*
