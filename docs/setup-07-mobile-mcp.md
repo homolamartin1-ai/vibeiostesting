@@ -40,6 +40,8 @@ Using the mobile MCP, take a screenshot of the Simulator and describe the screen
 ## Troubleshooting
 | Symptom | Cause | Fix |
 |---|---|---|
+| Crashes on load (e.g. missing `rxjs`) or errors `ADB not found` | **Wrong package.** The **unscoped** `mobile-mcp` on npm is a broken, Android-only stub. | Use the **scoped** package exactly as shown: `@mobilenext/mobile-mcp`. Not `mobile-mcp`. |
+| First run is slow / builds something | Normal — it builds **WebDriverAgent** on first use (needs Xcode + a booted Simulator). | Let it finish once; subsequent runs are fast. |
 | Agent says it has no mobile tools | Server not loaded | Restart Antigravity **fully**; confirm the config saved. |
 | Config "invalid JSON" | Comma/bracket error | Paste the file into the chat and ask the agent to fix it. |
 | Agent sees no device | No Simulator booted | `xcrun simctl boot "iPhone 16"` and `open -a Simulator`. |
