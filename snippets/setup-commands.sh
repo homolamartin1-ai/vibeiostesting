@@ -10,7 +10,7 @@ xcodebuild -version                    # verify
 xcrun simctl list devices              # see available Simulators
 
 # Boot an iPhone Simulator:
-xcrun simctl boot "iPhone 15" || true
+xcrun simctl boot "iPhone 16" || true
 open -a Simulator
 
 # --- 2. Homebrew + Node ------------------------------------------------------

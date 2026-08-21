@@ -30,7 +30,7 @@ For anything missing, give me the exact install command. Do not install without 
 *Used in: Section 3, Clip 8*
 
 ```
-Boot an iPhone 15 Simulator. Then:
+Boot an iPhone 16 Simulator. Then:
 1. Build and run techshop/reactnative-broken with Expo (npx expo start --ios).
 2. Separately, generate the Xcode project for techshop/swiftui-broken
    (xcodegen generate) and run it on the same Simulator.

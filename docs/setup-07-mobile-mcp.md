@@ -42,7 +42,7 @@ Using the mobile MCP, take a screenshot of the Simulator and describe the screen
 |---|---|---|
 | Agent says it has no mobile tools | Server not loaded | Restart Antigravity **fully**; confirm the config saved. |
 | Config "invalid JSON" | Comma/bracket error | Paste the file into the chat and ask the agent to fix it. |
-| Agent sees no device | No Simulator booted | `xcrun simctl boot "iPhone 15"` and `open -a Simulator`. |
+| Agent sees no device | No Simulator booted | `xcrun simctl boot "iPhone 16"` and `open -a Simulator`. |
 | `npx` not found | Node not on PATH | See [setup-02](setup-02-node-antigravity.md). |
 | Works, then stops after restart | Config written to the wrong file | Ask the agent to print the exact config path it used. |
 

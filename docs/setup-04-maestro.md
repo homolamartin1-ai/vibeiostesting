@@ -24,7 +24,7 @@ Maestro Studio should show the app's elements. We use Studio for debugging in Se
 | Symptom | Fix |
 |---|---|
 | `maestro: command not found` | Restart the terminal; ensure `~/.maestro/bin` is on PATH. |
-| Studio shows no device | Boot a Simulator first (`xcrun simctl boot "iPhone 15"`). |
+| Studio shows no device | Boot a Simulator first (`xcrun simctl boot "iPhone 16"`). |
 | Flow can't find an element | The `appId:` must be `com.techshop.ios`; check the element's id in Studio. |
 
 CLI reference: [`snippets/maestro-commands.sh`](../snippets/maestro-commands.sh).

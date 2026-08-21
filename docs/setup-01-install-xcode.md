@@ -81,14 +81,33 @@ xcodebuild -runFirstLaunch
 
 ---
 
-## Step 5 — Confirm the Simulator works
+## Step 5 — Install a Simulator runtime, then boot it
 
-```bash
-xcrun simctl list devices       # lists the iPhone Simulators you have
-xcrun simctl boot "iPhone 15"   # boot one (use a name from the list above)
-open -a Simulator               # open the Simulator window
-```
+Recent Xcode does **not** include the iOS Simulator by default — you download it once. If
+`xcrun simctl list runtimes` shows an empty `== Runtimes ==`, you need this step.
+
+1. Download the iOS Simulator runtime (several GB — let it finish):
+   ```bash
+   xcodebuild -downloadPlatform iOS
+   ```
+   *(GUI alternative: Xcode → Settings (⌘,) → **Platforms** tab → click **Get** next to iOS.)*
+
+2. See the devices you now have:
+   ```bash
+   xcrun simctl list devices available
+   ```
+   You'll see iPhones under an iOS version. **Device names depend on your Xcode version** —
+   newer Xcode lists **iPhone 16 / iPhone 17**, not iPhone 15. Pick any one from *your* list.
+
+3. Boot a device that's actually in your list, then open the Simulator:
+   ```bash
+   xcrun simctl boot "iPhone 16"   # use a name from YOUR list above
+   open -a Simulator
+   ```
 ✅ **Working:** an iPhone Simulator appears on screen. Setup 1 is done.
+
+> Throughout the course, wherever a command says `iPhone 15`, use whatever iPhone your
+> `simctl list devices available` shows instead — the exact model doesn't matter.
 
 ---
 
@@ -98,7 +117,8 @@ open -a Simulator               # open the Simulator window
 | `xcodebuild -version` errors with `…active developer directory '/Library/Developer/CommandLineTools'…` | Xcode is installed but your Mac points at the CLI tools. Do **Step 4**. |
 | Xcode version is older than 15 | Update Xcode from the App Store. |
 | `mdfind` prints nothing but you think Xcode is installed | It may still be downloading, or Spotlight is indexing. Wait, then re-run. Or check the App Store for the install progress. |
-| "iPhone 15" not found | Run `xcrun simctl list devices` and use a name from your list. |
+| `== Devices ==` is empty / `== Runtimes ==` is empty | No Simulator runtime installed. Run `xcodebuild -downloadPlatform iOS` (Step 5). |
+| `Invalid device or device pair: iPhone 15` | That model doesn't exist in your Xcode. Run `xcrun simctl list devices available` and boot a name from the list (e.g. `iPhone 16`). |
 | Simulator won't boot | `xcrun simctl shutdown all` then boot again; or reboot the Mac. |
 
 You never touch most of this again. From here, the Simulator just works.

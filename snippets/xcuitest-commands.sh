@@ -5,7 +5,7 @@
 TEST_EMAIL="$TEST_EMAIL" TEST_PASSWORD="$TEST_PASSWORD" \
 xcodebuild test \
   -scheme TechShop \
-  -destination 'platform=iOS Simulator,name=iPhone 15' \
+  -destination 'platform=iOS Simulator,name=iPhone 16' \
   -only-testing:TechShopUITests
 
 # List simulators / schemes:

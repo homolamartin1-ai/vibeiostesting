@@ -71,7 +71,7 @@ and press **Run** (⌘R). Or from the command line:
 
 ```bash
 cd techshop/swiftui-broken
-xcodebuild -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 15' build
+xcodebuild -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 16' build
 ```
 
 ### React Native (Expo) build

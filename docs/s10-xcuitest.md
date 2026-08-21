@@ -27,7 +27,7 @@ xcuitest/TechShopUITests/
 
 ## Run
 ```bash
-xcodebuild test -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 15'
+xcodebuild test -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 16'
 ```
 (or **Cmd-U** in Xcode). Credentials from `TEST_EMAIL` / `TEST_PASSWORD`.
 

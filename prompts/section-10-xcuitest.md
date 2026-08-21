@@ -37,7 +37,7 @@ xcuitest/TechShopUITests/:
   BUG-016 assert app.buttons["login-submit"] exists.
 ```
 
-**Expected:** run with `xcodebuild test -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 15'` (with TEST_EMAIL/TEST_PASSWORD exported).
+**Expected:** run with `xcodebuild test -scheme TechShop -destination 'platform=iOS Simulator,name=iPhone 16'` (with TEST_EMAIL/TEST_PASSWORD exported).
 
 ---
 
