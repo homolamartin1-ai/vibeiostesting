@@ -15,7 +15,7 @@ export default function CatalogScreen() {
         contentContainerStyle={{ padding: 16 }}
         renderItem={({ item }) => (
           <View testID={`product-${item.id}`} style={styles.card}>
-            <View style={styles.thumb} />
+            <View style={styles.thumb}><Text style={styles.thumbIcon}>{item.icon}</Text></View>
             <View style={styles.info}>
               {/* FIXED (BUG-007): clamp to one line with an ellipsis. */}
               <Text
@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 12,
   },
-  thumb: { width: 52, height: 52, borderRadius: 8, backgroundColor: '#e6e4f5', marginRight: 14 },
+  thumb: { width: 52, height: 52, borderRadius: 8, backgroundColor: '#e6e4f5', marginRight: 14, alignItems: 'center', justifyContent: 'center' },
+  thumbIcon: { fontSize: 28 },
   info: { flex: 1 },
   name: { fontSize: 16, fontWeight: '600', color: '#1a1442' },
   price: { fontSize: 15, color: '#3b2fb5', marginTop: 2 },

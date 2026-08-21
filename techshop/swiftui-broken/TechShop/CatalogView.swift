@@ -10,6 +10,7 @@ struct CatalogView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color(red: 0.90, green: 0.89, blue: 0.96))
                         .frame(width: 52, height: 52)
+                        .overlay(Text(product.icon).font(.system(size: 28)))
 
                     VStack(alignment: .leading, spacing: 2) {
                         // ─────────────────────────────────────────────
