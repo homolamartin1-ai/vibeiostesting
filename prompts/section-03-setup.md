@@ -7,15 +7,15 @@ You drive setup through the agent where you can. Most of this is one-time.
 ## Course reference
 | Prompt | Used in clip |
 |--------|-------------|
-| Prompt 1 — Verify the toolchain | **3, Clip 2–6** |
+| Prompt 1 — Verify the toolchain | **3, Clip 7** (first — confirm everything installed) |
+| Prompt 3 — Connect the mobile MCP | **3, Clip 7** (then set up the MCP) |
 | Prompt 2 — Run both TechShop apps | **3, Clip 8** |
-| Prompt 3 — Connect the mobile MCP | **3, Clip 7** |
 | Prompt 4 — First vibe check | **3, Clip 8** |
 
 ---
 
 ## Prompt 1: Verify the toolchain
-*Used in: Section 3*
+*Used in: Section 3, Clip 7 — run this first, before connecting the MCP, to confirm everything installed*
 
 ```
 Check my machine is ready for iOS mobile testing and tell me exactly what's missing:
