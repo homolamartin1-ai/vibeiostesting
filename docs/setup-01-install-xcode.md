@@ -21,11 +21,24 @@ xcodebuild -version
   `command not found` → you have only the *command line tools*, not the full Xcode app. You
   need full Xcode — go to Step 2.
 
-Two more quick checks (optional):
+### Is Xcode installed at all? (the reliable, path-independent check)
+A failing `xcodebuild -version` does **not** always mean Xcode is missing — Xcode can be
+installed while your Mac is still pointed at the Command Line Tools (see Troubleshooting).
+To check whether the Xcode app exists **anywhere** on your Mac, regardless of where it
+lives, ask Spotlight for it by its identity:
+
 ```bash
-xcode-select -p            # should point to /Applications/Xcode.app/Contents/Developer
-ls /Applications/Xcode.app # if this exists, the Xcode app is installed
+mdfind "kMDItemCFBundleIdentifier == 'com.apple.dt.Xcode'"
 ```
+
+- **Prints a path** (e.g. `/Applications/Xcode.app`) → Xcode **is** installed. If
+  `xcodebuild -version` still errors, you only need to point your Mac at it — see the
+  Troubleshooting row for `xcode-select -s`.
+- **Prints nothing** → Xcode is not installed → go to Step 2.
+
+> Note: `xcode-select -p` shows the *active* developer directory, **not** whether Xcode is
+> installed — it can read `/Library/Developer/CommandLineTools` even when Xcode is present.
+> Use the `mdfind` command above to know for sure.
 
 ### Which version you need
 - **Xcode 15 or newer** is required (the course targets **iOS 17+**).
