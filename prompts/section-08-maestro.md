@@ -20,7 +20,11 @@ the bug flows fail, then the **fixed** build for the regression pass in Section 
 *Used in: Section 8, Clip 2*
 
 ```
-Following skills/test-authoring.md, build the Maestro login flows for TechShop iOS
+First make sure the BROKEN build is installed on the Simulator — com.techshop.ios from
+techshop/reactnative-broken or techshop/swiftui-broken (the version with the planted bugs
+these tests catch), not the fixed build.
+
+Then, following skills/test-authoring.md, build the Maestro login flows for TechShop iOS
 (appId com.techshop.ios):
 
 - maestro/subflows/login.yaml — a reusable valid login. Locate the button by the text

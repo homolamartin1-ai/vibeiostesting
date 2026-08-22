@@ -21,7 +21,11 @@ finally catch **BUG-001** (password not masked) that Maestro could not.
 *Used in: Section 9, Clip 2*
 
 ```
-Following skills/test-authoring.md, scaffold an Appium suite under appium/ for TechShop
+First make sure the BROKEN build is installed on the Simulator — com.techshop.ios from
+techshop/reactnative-broken or techshop/swiftui-broken (the version with the planted bugs),
+not the fixed build.
+
+Then, following skills/test-authoring.md, scaffold an Appium suite under appium/ for TechShop
 iOS (bundle id com.techshop.ios, XCUITest automation):
 
 - conftest.py — a function-scoped driver fixture that launches the app fresh each test,

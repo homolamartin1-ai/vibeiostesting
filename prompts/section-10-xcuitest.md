@@ -24,7 +24,11 @@ the fastest to execute — the trade-off is that it is iOS-only.
 *Used in: Section 10, Clip 2*
 
 ```
-Following skills/test-authoring.md, create the XCUITest base and login tests under
+First make sure the BROKEN build is installed on the Simulator — com.techshop.ios from
+techshop/reactnative-broken or techshop/swiftui-broken (the version with the planted bugs),
+not the fixed build.
+
+Then, following skills/test-authoring.md, create the XCUITest base and login tests under
 xcuitest/TechShopUITests/:
 
 - TechShopUITestCase.swift — base XCTestCase that launches
