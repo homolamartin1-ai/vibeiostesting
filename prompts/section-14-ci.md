@@ -11,8 +11,10 @@ runner with a booted Simulator on every push. Workflows land in `.github/workflo
 | Prompt 1 — How mobile CI works | **14, Clip 1** |
 | Prompt 2 — Set up the repository secrets | **14, Clip 2** |
 | Prompt 3 — Maestro workflow | **14, Clip 2** |
-| Prompt 4 — Appium & XCUITest workflows | **14, Clip 3** |
-| Prompt 5 — Diagnose & fix a CI failure | **14, Clip 4** |
+| Prompt 4 — Push the Maestro workflow | **14, Clip 2** |
+| Prompt 5 — Appium & XCUITest workflows | **14, Clip 3** |
+| Prompt 6 — Push the Appium & XCUITest workflows | **14, Clip 3** |
+| Prompt 7 — Diagnose & fix a CI failure | **14, Clip 4** |
 
 ---
 
@@ -55,7 +57,16 @@ with TEST_EMAIL/TEST_PASSWORD from the repository secrets we just set, and uploa
 Maestro report as an artifact.
 ```
 
-## Prompt 4: Appium and XCUITest workflows
+## Prompt 4: Push the Maestro workflow to main
+*Used in: Section 14, Clip 2*
+
+```
+Commit .github/workflows/maestro.yml to main and push it, so the workflow triggers on the
+push. Use a clear commit message. Then confirm the run started — gh run list, or the
+Actions tab — and report the run URL so we can watch it.
+```
+
+## Prompt 5: Appium and XCUITest workflows
 *Used in: Section 14, Clip 3*
 
 ```
@@ -65,7 +76,16 @@ Simulator destination, upload the .xcresult bundle). Read secrets TEST_EMAIL/TES
 never hardcode credentials.
 ```
 
-## Prompt 5: Diagnose and fix a CI failure
+## Prompt 6: Push the Appium & XCUITest workflows to main
+*Used in: Section 14, Clip 3*
+
+```
+Commit .github/workflows/appium.yml and .github/workflows/xcuitest.yml to main and push
+them, so both workflows trigger. Use a clear commit message. Then confirm both runs started
+(gh run list) and report the run URLs.
+```
+
+## Prompt 7: Diagnose and fix a CI failure
 *Used in: Section 14, Clip 4*
 
 ```
