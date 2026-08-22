@@ -11,10 +11,9 @@ runner with a booted Simulator on every push. Workflows land in `.github/workflo
 | Prompt 1 — How mobile CI works | **14, Clip 1** |
 | Prompt 2 — Set up the repository secrets | **14, Clip 2** |
 | Prompt 3 — Maestro workflow | **14, Clip 2** |
-| Prompt 4 — Push the Maestro workflow | **14, Clip 2** |
+| Prompt 4 — Push everything, monitor & fix until green | **14, Clips 2 & 4** |
 | Prompt 5 — Appium & XCUITest workflows | **14, Clip 3** |
-| Prompt 6 — Push the Appium & XCUITest workflows | **14, Clip 3** |
-| Prompt 7 — Diagnose & fix a CI failure | **14, Clip 4** |
+| Prompt 6 — Push those, monitor & fix until green | **14, Clips 3 & 4** |
 
 ---
 
@@ -57,8 +56,8 @@ with TEST_EMAIL/TEST_PASSWORD from the repository secrets we just set, and uploa
 Maestro report as an artifact.
 ```
 
-## Prompt 4: Push everything to main
-*Used in: Section 14, Clip 2*
+## Prompt 4: Push everything, then monitor & fix until green
+*Used in: Section 14, Clips 2 & 4*
 
 ```
 We have been building locally all course and never pushed. Now commit and push EVERYTHING to
@@ -66,7 +65,14 @@ main — the skills, all three test suites (maestro/, appium/, xcuitest/), and t
 .github/workflows/maestro.yml — not just the workflow file. First show me git status so I
 see what will go up, make sure no secrets or .env-local are staged (they must stay
 gitignored), then commit with a clear message and push. The push triggers the Maestro
-workflow: confirm the run started (gh run list) and report the run URL so we can watch it.
+workflow.
+
+Then MONITOR the run to completion (gh run watch). If it fails, diagnose the cause from the
+logs — Simulator not booted, app not installed, wrong destination, missing secret, or a real
+test failure — FIX it directly (edit the workflow or the test), commit, and push again.
+Repeat this monitor → diagnose → fix → push loop until the Maestro run is green. Report the
+final run URL. Don't stop at a red run and don't just describe the fix — keep going until it
+passes.
 ```
 
 ## Prompt 5: Appium and XCUITest workflows
@@ -79,25 +85,18 @@ Simulator destination, upload the .xcresult bundle). Read secrets TEST_EMAIL/TES
 never hardcode credentials.
 ```
 
-## Prompt 6: Push the Appium & XCUITest workflows to main
-*Used in: Section 14, Clip 3*
+## Prompt 6: Push those, then monitor & fix until green
+*Used in: Section 14, Clips 3 & 4*
 
 ```
 Commit .github/workflows/appium.yml and .github/workflows/xcuitest.yml to main and push
-them, so both workflows trigger. Use a clear commit message. Then confirm both runs started
-(gh run list) and report the run URLs.
+them, so both workflows trigger. Then MONITOR both runs to completion (gh run watch). For
+any that fails, diagnose from the logs — Simulator not booted, app not installed, wrong
+destination, missing secret, or a real test failure — FIX it directly (edit the workflow or
+the test), commit, and push again. Repeat the monitor → diagnose → fix → push loop until both
+the Appium and XCUITest runs are green. Report the final run URLs. Keep going until they pass.
 ```
 
-## Prompt 7: Diagnose and fix a CI failure
-*Used in: Section 14, Clip 4*
-
-```
-Here is a failing CI run log: [paste]. Diagnose the cause — Simulator not booted, app not
-installed, wrong destination, missing secret, or a real test failure — then FIX it: edit the
-workflow (or the test) directly, explain what you changed and why, and push so the next run
-is green. Don't just describe the fix — apply it.
-```
-
-**Expected:** three green workflows with artifacts on every push — and the secrets are
-already in place from Prompt 2, so nothing fails on a missing credential. Now it runs
-without you.
+**Expected:** three green workflows with artifacts on every push — reached by pushing,
+watching, and fixing in a loop until green, with the secrets already in place from Prompt 2
+so nothing fails on a missing credential. Now it runs without you.

@@ -28,9 +28,10 @@ credentials from the first test, so this is trivial now.
 
 ## Debugging CI failures
 Most early failures are infrastructure, not tests: Simulator didn't boot, app didn't install,
-wrong destination, missing secret. Paste the run log to the agent and ask it to diagnose **and
-fix** — edit the workflow or test directly and push, not just describe the fix. CI logs are
-long and noisy, and the agent parses them fast.
+wrong destination, missing secret. The push prompts (4 & 6) fold this in: after pushing, the
+agent **monitors** the run (`gh run watch`) and, on red, diagnoses from the logs, **fixes**
+the workflow or test directly, and pushes again — looping until green, not just describing the
+fix. CI logs are long and noisy, and the agent parses them fast, iteration after iteration.
 
 ## Career note
 Maestro and Appium workflows are cross-platform: point the same skeleton at an Android
