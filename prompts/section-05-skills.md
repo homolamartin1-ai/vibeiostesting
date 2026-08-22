@@ -25,14 +25,16 @@ them here; we put them to work from Section 7 on.
 ```
 Create a reusable skill file at skills/test-case-design.md.
 
-Purpose: given a mobile feature and my exploration notes, produce a complete test
-matrix. Write it as instructions YOU (the agent) follow whenever I ask you to design
+Purpose: given a mobile feature (login, catalog, cart, or checkout) plus my exploration
+notes in exploration-notes.md and the spec in techshop/requirements.md, produce a complete
+test matrix. Write it as instructions YOU (the agent) follow whenever I ask you to design
 test cases. It must require:
 
 - THREE categories per feature: Positive, Negative, Edge (boundaries).
 - A consistent per-case format: ID, behavioural title, category, preconditions,
   steps, expected result.
-- Coverage tied to the real app: use exploration-notes.md, not generic guesses.
+- Coverage tied to the real app: use exploration-notes.md and techshop/requirements.md,
+  not generic guesses.
 - For each case, note the LOCATOR it will need (accessibility id or visible text),
   and flag any control with NO stable id as a testability defect.
 - Flag any known bug as a planned regression case with its BUG-id, and note cases
