@@ -57,13 +57,16 @@ with TEST_EMAIL/TEST_PASSWORD from the repository secrets we just set, and uploa
 Maestro report as an artifact.
 ```
 
-## Prompt 4: Push the Maestro workflow to main
+## Prompt 4: Push everything to main
 *Used in: Section 14, Clip 2*
 
 ```
-Commit .github/workflows/maestro.yml to main and push it, so the workflow triggers on the
-push. Use a clear commit message. Then confirm the run started — gh run list, or the
-Actions tab — and report the run URL so we can watch it.
+We have been building locally all course and never pushed. Now commit and push EVERYTHING to
+main — the skills, all three test suites (maestro/, appium/, xcuitest/), and the new
+.github/workflows/maestro.yml — not just the workflow file. First show me git status so I
+see what will go up, make sure no secrets or .env-local are staged (they must stay
+gitignored), then commit with a clear message and push. The push triggers the Maestro
+workflow: confirm the run started (gh run list) and report the run URL so we can watch it.
 ```
 
 ## Prompt 5: Appium and XCUITest workflows
