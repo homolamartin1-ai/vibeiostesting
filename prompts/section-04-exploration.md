@@ -60,8 +60,7 @@ does nothing when tapped, record exactly that.
 ```
 Read techshop/requirements.md. Compare it to exploration-notes.md and list: which
 requirements you have observed, which you have not exercised yet, and any behaviour that
-contradicts the spec. Where the behaviour contradicts the spec, it's fine to call it a bug —
-capture these so they feed the test design in Section 7.
+contradicts the spec.
 ```
 
 **Expected:** a populated `exploration-notes.md` and a coverage list — the input to the
