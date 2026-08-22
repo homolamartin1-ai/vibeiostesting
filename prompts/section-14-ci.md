@@ -34,10 +34,12 @@ Before we write any workflow, set up the credentials the pipelines need so no ru
 a missing secret. The tests read TEST_EMAIL and TEST_PASSWORD from the environment; in CI
 those come from GitHub repository secrets.
 
-Using the gh CLI, add TEST_EMAIL and TEST_PASSWORD as repository secrets on my repo, reading
-the values from my local .env-local — do NOT print the values. Run: gh secret set TEST_EMAIL
-and gh secret set TEST_PASSWORD. Then confirm both exist with gh secret list. If gh is not
-authenticated, tell me to run gh auth login first.
+Using the gh CLI, add TEST_EMAIL and TEST_PASSWORD as repository secrets on my repo, set to
+the ACTUAL values from my local .env-local (source it first, then pass each value explicitly,
+e.g. gh secret set TEST_EMAIL --body "$TEST_EMAIL" and gh secret set TEST_PASSWORD --body
+"$TEST_PASSWORD"). Do not create them empty and do not print the values. Then confirm both
+exist and are non-empty with gh secret list. If gh is not authenticated, tell me to run
+gh auth login first.
 ```
 
 **Expected:** `gh secret list` shows `TEST_EMAIL` and `TEST_PASSWORD`. Now every workflow

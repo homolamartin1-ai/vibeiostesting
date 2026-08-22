@@ -20,9 +20,10 @@ Every workflow is a variation on:
 ## Secrets — set these up FIRST
 Do this **before** writing any workflow, or every first run fails on a missing credential.
 Add `TEST_EMAIL` and `TEST_PASSWORD` as **repository secrets** — either in the UI (Settings →
-Secrets and variables → Actions) or, faster, with the agent via the GitHub CLI:
-`gh secret set TEST_EMAIL` / `gh secret set TEST_PASSWORD` (values from your `.env-local`),
-then `gh secret list` to confirm. They never appear in code — your skills enforced env-var
+Secrets and variables → Actions) or, faster, with the agent via the GitHub CLI — set to the
+**actual** values (source `.env-local` first, then pass each explicitly):
+`gh secret set TEST_EMAIL --body "$TEST_EMAIL"` / `gh secret set TEST_PASSWORD --body
+"$TEST_PASSWORD"`, then `gh secret list` to confirm they exist and are non-empty. They never appear in code — your skills enforced env-var
 credentials from the first test, so this is trivial now.
 
 ## Debugging CI failures
