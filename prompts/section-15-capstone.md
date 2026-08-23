@@ -4,8 +4,12 @@
 
 Your independent project. A new app you have not seen — **BookNow**, a hotel booking app
 (login → search results → booking form → confirmation) — shipped in SwiftUI and React
-Native, broken + fixed. The **bug count is not disclosed**. You run the whole workflow
-yourself with your four skills. Minimal prompting here on purpose.
+Native, broken + fixed. The **bug count is not disclosed**.
+
+**No prompts are provided for this section — on purpose.** You have written every prompt you
+need across Sections 4–14, and you have four skills that carry your standards. The capstone is
+where you drive the whole workflow yourself, in your own words, making the judgment calls. If
+you find yourself wanting a prompt, look back at the section that covered that step.
 
 ## Your task checklist
 1. **Explore** BookNow with the mobile MCP; write `exploration-notes.md`.
@@ -16,16 +20,6 @@ yourself with your four skills. Minimal prompting here on purpose.
 5. **Report** the real bugs with the bug-reporting skill.
 6. **Verify** against the fixed build (regression pass).
 7. **Ship** it to CI.
-
-## The only prompt you need
-*Used in: Section 15, Clip 2*
-
-```
-This is BookNow, an app I have not tested before, in capstone/. Using my skills in skills/,
-help me run the full workflow: explore it via the mobile MCP, design a test matrix, build
-the suite, run it, triage and report the bugs, verify against the fixed build, and ship it
-to CI. Ask me to make the judgment calls — don't just do it for me.
-```
 
 ## How to know you did it right (self-check)
 - Your exploration notes name every screen's elements and flag any control with no id.

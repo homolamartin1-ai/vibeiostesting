@@ -1,6 +1,7 @@
 # S15 — Capstone Brief: BookNow iOS
 
-Companion to Section 15. App in [`capstone/`](../capstone/). Prompts:
+Companion to Section 15. App in [`capstone/`](../capstone/). No prompts this section — you
+drive it yourself; the task checklist and self-check live in
 [`prompts/section-15-capstone.md`](../prompts/section-15-capstone.md).
 
 ## The app
