@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  KeyboardAvoidingView,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import { useAuth } from '../context/AuthContext';
 
 export default function LoginScreen() {
@@ -11,12 +19,22 @@ export default function LoginScreen() {
     login(email, password);
   }
 
+  // FIXED (BUG-017 family): KeyboardAvoidingView + ScrollView with
+  // keyboardShouldPersistTaps keep the Log In button tappable when the
+  // software keyboard is up (it previously covered login-submit on small screens).
   return (
-    <View style={styles.container}>
-      <Text style={styles.brand}>TechShop</Text>
-      <Text style={styles.subtitle}>Sign in to continue</Text>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
+      <ScrollView
+        contentContainerStyle={styles.scroll}
+        keyboardShouldPersistTaps="handled"
+      >
+        <Text style={styles.brand}>TechShop</Text>
+        <Text style={styles.subtitle}>Sign in to continue</Text>
 
-      <TextInput
+        <TextInput
         testID="login-email"
         accessibilityLabel="Email"
         style={styles.input}
@@ -48,12 +66,14 @@ export default function LoginScreen() {
       <TouchableOpacity testID="login-submit" style={styles.button} onPress={onSubmit}>
         <Text style={styles.buttonText}>Log In</Text>
       </TouchableOpacity>
-    </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: '#fff' },
+  container: { flex: 1, backgroundColor: '#fff' },
+  scroll: { flexGrow: 1, justifyContent: 'center', padding: 24 },
   brand: { fontSize: 34, fontWeight: '800', color: '#3b2fb5', textAlign: 'center' },
   subtitle: { fontSize: 16, color: '#666', textAlign: 'center', marginBottom: 28 },
   input: {

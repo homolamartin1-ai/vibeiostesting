@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import {
+  View,
   Text,
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  KeyboardAvoidingView,
   ScrollView,
-  Platform,
 } from 'react-native';
 import { useCart } from '../context/CartContext';
 
@@ -42,10 +41,11 @@ export default function CheckoutScreen({ navigation }) {
   }
 
   function validate() {
-    // FIXED (BUG-012): every field is required.
+    // FIXED (BUG-012): every field is required. Single message "All fields are
+    // required" — parity with the SwiftUI build so one cross-build test asserts it.
     for (const f of FIELDS) {
       if (!form[f.key] || !form[f.key].trim()) {
-        return `${f.label} is required`;
+        return 'All fields are required';
       }
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return 'Enter a valid email';
@@ -70,14 +70,17 @@ export default function CheckoutScreen({ navigation }) {
     navigation.navigate('Confirmation', { orderRef, total });
   }
 
-  // FIXED (BUG-017): KeyboardAvoidingView + ScrollView keep the focused
-  // field (including CVV at the bottom) visible above the keyboard.
+  // FIXED (BUG-017): ScrollView with automaticallyAdjustKeyboardInsets keeps every
+  // field (including CVV at the bottom) and the Place Order button scrollable above
+  // the keyboard, without the layout bounce that KeyboardAvoidingView caused when
+  // moving between numeric-keypad and text inputs.
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    >
-      <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
+    <View style={styles.container}>
+      <ScrollView
+        contentContainerStyle={styles.scroll}
+        keyboardShouldPersistTaps="handled"
+        automaticallyAdjustKeyboardInsets={true}
+      >
         <Text style={styles.heading}>Checkout</Text>
 
         {FIELDS.map((f) => (
@@ -104,7 +107,7 @@ export default function CheckoutScreen({ navigation }) {
           <Text style={styles.buttonText}>Place Order</Text>
         </TouchableOpacity>
       </ScrollView>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 

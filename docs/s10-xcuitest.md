@@ -14,6 +14,33 @@ runs alongside the app, driven by Xcode. You get `XCUIApplication` and reach in:
 2. Xcode → **File → New → Target → UI Testing Bundle**, named `TechShopUITests`.
 3. Add the Swift files, set the target's **Target Application** to `TechShop`.
 
+### Or wire it with XcodeGen (recommended — reproducible, and what CI uses)
+Instead of clicking through Xcode, add a UI-test target to the app's `project.yml`
+(`techshop/swiftui-fixed/project.yml`) pointing at the Swift files you build in `xcuitest/`.
+This is the same target Section 14's `xcuitest.yml` regenerates on the runner, so wiring it
+here means CI just works:
+```yaml
+  TechShopUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - ../../xcuitest/TechShopUITests
+    dependencies:
+      - target: TechShop
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.techshop.TechShopUITests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: TechShop
+```
+Then `xcodegen generate` and `xcodebuild test`. Add this target **after** you've created
+`xcuitest/TechShopUITests/` — the `sources` path must exist or `xcodegen generate` fails.
+
+> **"unsupported Xcode project version 77"** on a CI runner (or an older Xcode) means your
+> local XcodeGen emitted a newer `.pbxproj` format than the runner's Xcode reads. Fix by
+> matching versions (pin the same Xcode on the runner), or pin an older project format in
+> `options:` (e.g. `projectVersion: 56`) so the generated project stays broadly compatible.
+
 ## What you build
 ```
 xcuitest/TechShopUITests/

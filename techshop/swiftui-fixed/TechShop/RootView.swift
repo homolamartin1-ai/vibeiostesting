@@ -16,11 +16,15 @@ struct RootView: View {
 
 struct MainTabs: View {
     var body: some View {
+        // Tabs carry stable identifiers (parity with the RN build's tab-products /
+        // tab-cart testIDs) so the same locator finds the bottom-nav tabs on both stacks.
         TabView {
             CatalogView()
                 .tabItem { Label("Products", systemImage: "bag") }
+                .accessibilityIdentifier("tab-products")
             CartView()
                 .tabItem { Label("Cart", systemImage: "cart") }
+                .accessibilityIdentifier("tab-cart")
         }
     }
 }
