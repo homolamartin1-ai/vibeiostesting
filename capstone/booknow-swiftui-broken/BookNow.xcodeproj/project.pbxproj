@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023E7383D744871E827A72E1 /* BookNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DBFEEEFC38CC375B589CD /* BookNowApp.swift */; };
+		5819C357C2FF85ED3869053A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7A9C9E116F1BC459FE58CD /* RootView.swift */; };
+		6C556E9BEB8555EA2C781999 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDA3EB0F422E86DCDF3273 /* BookingView.swift */; };
+		8061CE658FE5179E10C6B137 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC90E0899FF9A290758FD19 /* Store.swift */; };
+		8D30DE53EF8ADF6754808AF5 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6BE850C071B37E145B2FB /* ConfirmationView.swift */; };
+		9E60D1819758AC889BF4FFDD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF0E7A73E033C3FE9CF568 /* Models.swift */; };
+		C3C196B7509FA647CD4C6FC0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3017F55D31D745AF7BC48532 /* LoginView.swift */; };
+		E97BB3F7D6DCFE74C49F149F /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D50CED1FAA8668ED49EA72 /* RoomsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02FDA3EB0F422E86DCDF3273 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
+		0EA6BE850C071B37E145B2FB /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		2E5DBFEEEFC38CC375B589CD /* BookNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNowApp.swift; sourceTree = "<group>"; };
+		3017F55D31D745AF7BC48532 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3DC90E0899FF9A290758FD19 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5B22152B91E84381FF5DAE52 /* BookNow.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BookNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87DF0E7A73E033C3FE9CF568 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A8D50CED1FAA8668ED49EA72 /* RoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsView.swift; sourceTree = "<group>"; };
+		DA7A9C9E116F1BC459FE58CD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		25AEC1298D436F5C9F07B170 = {
+			isa = PBXGroup;
+			children = (
+				7D47E427BCC3CB95AF02C6C7 /* BookNow */,
+				A8DB7451879F59B590EEB077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D47E427BCC3CB95AF02C6C7 /* BookNow */ = {
+			isa = PBXGroup;
+			children = (
+				02FDA3EB0F422E86DCDF3273 /* BookingView.swift */,
+				2E5DBFEEEFC38CC375B589CD /* BookNowApp.swift */,
+				0EA6BE850C071B37E145B2FB /* ConfirmationView.swift */,
+				3017F55D31D745AF7BC48532 /* LoginView.swift */,
+				87DF0E7A73E033C3FE9CF568 /* Models.swift */,
+				A8D50CED1FAA8668ED49EA72 /* RoomsView.swift */,
+				DA7A9C9E116F1BC459FE58CD /* RootView.swift */,
+				3DC90E0899FF9A290758FD19 /* Store.swift */,
+			);
+			path = BookNow;
+			sourceTree = "<group>";
+		};
+		A8DB7451879F59B590EEB077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B22152B91E84381FF5DAE52 /* BookNow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C871FB8167266BF338D2AEB /* BookNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 414906878EB7A1782CA1759E /* Build configuration list for PBXNativeTarget "BookNow" */;
+			buildPhases = (
+				CF5F3D53F35D602E6383EE4A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookNow;
+			packageProductDependencies = (
+			);
+			productName = BookNow;
+			productReference = 5B22152B91E84381FF5DAE52 /* BookNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9052CCDB2C4D48D39E3C591B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = D540A70D84139EE33653F777 /* Build configuration list for PBXProject "BookNow" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 25AEC1298D436F5C9F07B170;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A8DB7451879F59B590EEB077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C871FB8167266BF338D2AEB /* BookNow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF5F3D53F35D602E6383EE4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023E7383D744871E827A72E1 /* BookNowApp.swift in Sources */,
+				6C556E9BEB8555EA2C781999 /* BookingView.swift in Sources */,
+				8D30DE53EF8ADF6754808AF5 /* ConfirmationView.swift in Sources */,
+				C3C196B7509FA647CD4C6FC0 /* LoginView.swift in Sources */,
+				9E60D1819758AC889BF4FFDD /* Models.swift in Sources */,
+				E97BB3F7D6DCFE74C49F149F /* RoomsView.swift in Sources */,
+				5819C357C2FF85ED3869053A /* RootView.swift in Sources */,
+				8061CE658FE5179E10C6B137 /* Store.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		333A70BE1D31A0267DFF33F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		41ADFA04960A13EF4B6994FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booknow.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6E49EEE10891B47D0B82DD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booknow.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EE63174EB72C01CF8F890D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		414906878EB7A1782CA1759E /* Build configuration list for PBXNativeTarget "BookNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E49EEE10891B47D0B82DD8C /* Debug */,
+				41ADFA04960A13EF4B6994FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D540A70D84139EE33653F777 /* Build configuration list for PBXProject "BookNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE63174EB72C01CF8F890D8A /* Debug */,
+				333A70BE1D31A0267DFF33F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9052CCDB2C4D48D39E3C591B /* Project object */;
+}

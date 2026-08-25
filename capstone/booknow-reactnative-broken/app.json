@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "BookNow",
+    "slug": "booknow-ios-broken",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.booknow.ios",
+      "supportsTablet": false
+    }
+  }
+}
