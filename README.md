@@ -1,4 +1,4 @@
-# Vibetesting in 2026: iOS Mobile App Testing with Maestro, Appium & XCUITest — Course Repository
+# Agent vibe testing 2026: iOS Mobile Testing with AI — Course Repository
 
 Resources for the Udemy course. Everything you need to follow along is in this repo.
 
