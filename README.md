@@ -5,6 +5,13 @@ Resources for the Udemy course. Everything you need to follow along is in this r
 > **You need a Mac.** iOS testing requires macOS + Xcode's iOS Simulator. There is no
 > supported way to run these on Windows or Linux.
 
+> **iOS 26 / 27 compatibility.** The native **SwiftUI** apps (`*/swiftui-*`) ship an explicit
+> `Info.plist` with a UIScene manifest, so they launch on **iOS 17 through 27**. iOS 26 began
+> *enforcing* UIScene lifecycle adoption — an app without a scene manifest crashes at launch on
+> iOS 26/27 with `EXC_BREAKPOINT` in `…NoSceneLifecycleAdoption…` (an OS/SDK requirement, **not**
+> a planted bug). If you ever see it, add a scene manifest to your `Info.plist` or run on an
+> iOS 18.x simulator. The **React Native (Expo)** builds run inside Expo Go and are unaffected.
+
 ## Getting started
 
 **Fork this repo** (click **Fork**, top-right) so you have your own copy to commit
